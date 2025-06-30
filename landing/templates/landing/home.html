@@ -1,0 +1,222 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="yandex-verification" content="bd794545a1e243e0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>마디나 쌤 👩🏻‍🏫</title>
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>new WOW().init();</script>
+
+    <!-- SEO и соцсети -->
+    <meta name="description" content="Обучение корейскому языку с носителем — индивидуальные занятия от Мадины 쌤. Подготовка к TOPIK, учёбе, визам и жизни в Корее.">
+    <meta name="keywords" content="корейский язык, обучение, преподаватель, TOPIK, Мадина, корейский Алматы, занятия онлайн">
+    <meta name="author" content="Мадина 쌤">
+    <meta property="og:title" content="Мадина 쌤 — преподаватель корейского языка">
+    <meta property="og:description" content="TOPIK 6급 · 600+ студентов · Подготовка к экзаменам, учёбе и жизни в Корее.">
+    <meta property="og:image" content="{% static 'images/og-image.jpg' %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Мадина 쌤 — преподаватель корейского языка">
+    <meta name="twitter:description" content="TOPIK 6급 · 600+ студентов · Подготовка к экзаменам, учёбе и жизни в Корее.">
+    <meta name="twitter:image" content="{% static 'images/og-image.jpg' %}">
+
+    <style>
+        body {
+            background: url("{% static 'images/korea-bg.png' %}") no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        padding-top: 70px; /* чтобы контент не перекрывался меню */
+      }
+    </style>
+</head>
+
+<body class="text-white w-100 overflow-x-hidden" style="padding-top: 70px;">
+
+    <!-- 🌸 Шапка -->
+    <header class="mb-5">
+        <h1 class="fw-bold text-pink fs-2 wow animate__animated animate__fadeInDown">마디나 쌤 👩🏻‍🏫</h1>
+        <p class="lead wow animate__animated animate__fadeInDown animate__delay-05s">
+            Преподаватель корейского языка · TOPIK 6급 · Более 600 студентов
+        </p>
+        <a href="#form" class="btn btn-outline-danger btn-light-text wow animate__animated animate__fadeInDown animate__delay-1s">
+            Записаться на занятие
+        </a>
+    </header>
+
+    <section class="container-fluid py-5 px-3 text-center">
+        <h2 class="mb-4 wow animate__animated animate__fadeInUp">Обо мне</h2>
+
+        <p class="lead wow animate__animated animate__fadeInUp animate__delay-05s">
+            Меня зовут <strong>Мадина</strong> 👩🏻‍🏫, я преподаю корейский язык с 2019 года.
+            Обучалась в <strong>SangMyung University</strong> и <strong>Korea University</strong>.
+        </p>
+
+        <div class="my-5 d-flex justify-content-center wow animate__animated animate__zoomIn animate__delay-1s">
+            <div class="scroll-frame parchment text-center position-relative">
+                <div class="corner top-left"></div>
+                <div class="corner top-right"></div>
+                <div class="corner bottom-left"></div>
+                <div class="corner bottom-right"></div>
+
+                <img src="{% static 'images/madina.jpg' %}" alt="Мадина" class="img-fluid rounded shadow mb-3" style="max-width: 250px;">
+                <p class="scroll-caption">На вручении диплома в 고려대학교 🎓</p>
+                <p class="scroll-signature">마디나 쌤</p>
+                <div class="seal"></div>
+            </div>
+        </div>
+
+        <p class="wow animate__animated animate__fadeInUp animate__delay-05s">
+            Уровень языка — <strong>TOPIK 6</strong>. Мои студенты успешно сдают экзамены, поступают в университеты Кореи,
+            получают визы, работу, создают семьи или просто учат родной язык.
+        </p>
+
+        <p class="wow animate__animated animate__fadeInUp animate__delay-05s">
+            За 5 лет работы я обучила более <strong>600 студентов</strong> — от школьников до взрослых.
+        </p>
+    </section>
+
+    <section class="container-fluid py-5 px-3">
+        <h2 class="mb-4 wow animate__animated animate__fadeInUp" style="color: #ffe0ec;">Как проходят занятия?</h2>
+
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center mb-3 wow animate__animated animate__fadeInLeft">
+                <img src="{% static 'images/book_kaz.jpg' %}" class="img-fluid rounded shadow-sm" alt="Корейский для казахстанцев">
+                <p class="mt-2 small">Учебник для начального уровня</p>
+            </div>
+
+            <div class="col-md-4 wow animate__animated animate__fadeInUp">
+                <ul class="list-unstyled lead">
+                    <li>📘 Начинаем с <strong>«Корейский для казахстанцев»</strong></li>
+                    <li>📗 Продолжаем по <strong>учебникам Yonsei University</strong></li>
+                    <li>📚 Используем материалы для <strong>TOPIK</strong>, словари, мультики, дорамы</li>
+                    <li>🎯 Занятия адаптируются <strong>под ваши цели и интересы</strong></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 text-center mb-3 wow animate__animated animate__fadeInRight">
+                <img src="{% static 'images/book_yonsei.jpg' %}" class="img-fluid rounded shadow-sm" alt="Учебник Yonsei">
+                <p class="mt-2 small">Учебник Yonsei University</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid py-5 px-3" id="faq">
+        <h2 class="mb-4 wow animate__animated animate__fadeInUp" style="color: #ffe0ec;">❓ Часто задаваемые вопросы</h2>
+        <div class="accordion review-accordion" id="faqAccordion">
+
+            <div class="accordion-item faq-item mb-3 wow animate__animated animate__fadeInUp">
+                <h2 class="accordion-header" id="faqOneHeading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne">
+                        Есть ли возрастные ограничения?
+                    </button>
+                </h2>
+                <div id="faqOne" class="accordion-collapse collapse" aria-labelledby="faqOneHeading" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Нет! Самой взрослой студентке было 64 года 🧓🏻. Учиться можно в любом возрасте — главное, чтобы было желание и интерес!
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item faq-item mb-3 wow animate__animated animate__fadeInUp animate__delay-05s">
+                <h2 class="accordion-header" id="faqTwoHeading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                        За сколько времени можно пройти уровень?
+                    </button>
+                </h2>
+                <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="faqTwoHeading" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        В среднем — за 3 месяца при регулярных занятиях и выполнении домашних заданий ✍️📖
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item faq-item mb-3 wow animate__animated animate__fadeInUp animate__delay-1s">
+                <h2 class="accordion-header" id="faqThreeHeading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                        С какими материалами вы работаете?
+                    </button>
+                </h2>
+                <div id="faqThree" class="accordion-collapse collapse" aria-labelledby="faqThreeHeading" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Учебники Yonsei, «Корейский для казахстанцев», диалоги, дорамы, TOPIK, игры и мультфильмы — всё под запрос 💡
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container-fluid py-5 px-3" id="reviews">
+        <h2 class="mb-4 wow animate__animated animate__fadeInUp" style="color: #ffe0ec;">💬 Отзывы студентов</h2>
+        <div class="row g-4">
+            <div class="col-md-4 wow animate__animated animate__fadeInUp">
+                <div class="card review-card h-100">
+                    <div class="card-body">
+                        <p class="card-text">🌟 “Занимаюсь с Мадиной с нуля, и уже через 4 месяца начала понимать дорамы без субтитров. Очень душевная и грамотная подача!”</p>
+                        <p class="text-muted">— Алия, 27 лет</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 wow animate__animated animate__fadeInUp animate__delay-05s">
+                <div class="card review-card h-100">
+                    <div class="card-body">
+                        <p class="card-text">🌟 “Благодаря занятиям с 마디나 쌤 я сдала TOPIK II на 5급 и поступила в корейский университет. Спасибо!”</p>
+                        <p class="text-muted">— Сабина, студентка</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 wow animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="card review-card h-100">
+                    <div class="card-body">
+                        <p class="card-text">🌟 “Мне 42, боялась, что уже поздно учить язык. Но с Мадиной учиться — одно удовольствие. Всё разжёвывается до мелочей.”</p>
+                        <p class="text-muted">— Нургуль, Алматы</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="form" class="container-fluid py-5 px-3">
+        <h2 class="mb-4 wow animate__animated animate__fadeInUp" style="color: #ffe0ec;">Записаться на занятие</h2>
+
+        <form method="post" class="text-start col-12 col-md-8 mx-auto wow animate__animated animate__fadeInUp animate__delay-1s">
+            {% csrf_token %}
+            {{ form.as_p }} {{ form.honeypot }}
+            <div class="d-grid mt-3">
+                <button type="submit" class="btn btn-pink">Отправить</button>
+            </div>
+        </form>
+
+        {% if success %}
+            <div class="alert alert-success mt-3 text-center wow animate__animated animate__fadeInUp animate__delay-1s">
+                ✅ Спасибо! Заявка отправлена.
+            </div>
+        {% endif %}
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <a href="#form" class="fixed-signup-button btn btn-danger shadow animate__animated animate__bounceInUp">
+        Записаться на занятие
+    </a>
+</body>
+</html>

@@ -1,0 +1,296 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    color: #fdfdfd;
+    background: url("../images/korea-bg.png") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+
+/* Затемнение фона */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45); /* Темнее фон */
+    z-index: -1;
+}
+
+/* Убираем размытие, чтобы всё работало */
+.overlay-wrapper {
+    position: relative;
+    z-index: 1;
+}
+.overlay-wrapper::before {
+    display: none;
+}
+
+/* Заголовки */
+h1, h2 {
+    color: #ffe0ec;
+}
+
+/* Кнопки */
+.btn-light-text {
+    color: #ffe0ec !important;
+    border-color: #ffe0ec !important;
+}
+.btn-light-text:hover {
+    background-color: #ffe0ec !important;
+    color: #333 !important;
+}
+.btn-pink {
+    background-color: #f9d5e5;
+    color: #000;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+.btn-pink:hover {
+    background-color: #ffd6e8;
+    color: #000;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+}
+
+/* Отзывы */
+.review-card {
+    background: linear-gradient(145deg, rgba(255,182,193,0.2), rgba(255,255,255,0.05));
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px);
+}
+.review-card .card-text {
+    font-style: italic;
+    font-size: 1rem;
+}
+.review-card .text-muted {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #ffe0ec !important;
+    font-weight: 500;
+}
+
+/* FAQ с анимацией */
+.faq-item {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    color: #fff;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+.faq-item:nth-child(1) { animation-delay: 0.2s; }
+.faq-item:nth-child(2) { animation-delay: 0.4s; }
+.faq-item:nth-child(3) { animation-delay: 0.6s; }
+
+.faq-item .accordion-button {
+    background-color: rgba(255, 218, 235, 0.2);
+    color: #ffe0ec;
+    font-weight: 600;
+    border: none;
+    box-shadow: none;
+}
+.faq-item .accordion-button:not(.collapsed) {
+    background-color: rgba(255, 218, 235, 0.4);
+    color: #fff;
+}
+.faq-item .accordion-body {
+    background-color: transparent;
+    color: #fdfdfd;
+    font-size: 1rem;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Модальные окна (если используешь) */
+.modal-content {
+    animation: fadeInUp 0.6s ease-in-out;
+    border-radius: 16px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+.modal-content.bg-light {
+    background-color: #fffafc !important;
+}
+
+/*Мобильная адаптация*/
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.5rem !important;
+        text-align: center;
+    }
+
+    .card-text {
+        font-size: 1.05rem !important;
+        line-height: 1.6;
+    }
+
+    .text-muted {
+        font-size: 0.95rem !important;
+    }
+
+    .review-card {
+        padding: 1rem !important;
+    }
+
+    .container, .container-fluid {
+	 width: 100% !important;
+	 max-width: 100% !important;
+	 padding-left: 15px !important;
+	 padding-right: 15px !important;
+    }
+
+    section#reviews {
+        padding: 2rem 1rem !important;
+    }
+}
+      
+
+.polaroid {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    max-width: 280px;
+    transition: transform 0.3s ease;
+}
+.polaroid:hover {
+    transform: scale(1.03) rotate(-1deg);
+}
+
+.signature-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 2px dashed #ffe0ec;
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    max-width: 320px;
+}
+
+.signature-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+    color: #ffe0ec;
+    margin-top: 5px;
+}
+
+/* Подключи шрифт Dancing Script */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+.scroll-frame {
+    background: linear-gradient(135deg, #fff5f7 0%, #fae1e7 100%);
+    border: 8px double #ffccda;
+    border-radius: 30px;
+    box-shadow: inset 0 0 10px rgba(255, 192, 203, 0.4), 0 10px 25px rgba(0,0,0,0.2);
+    max-width: 320px;
+    backdrop-filter: blur(5px);
+    padding: 20px 25px;
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+}
+
+.scroll-caption {
+    font-size: 1.1rem;
+    color: #444;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.scroll-signature {
+    font-size: 1.6rem;
+    color: #cc2a5d;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.scroll-frame.parchment {
+    background: url("https://www.transparenttextures.com/patterns/paper-fibers.png"), linear-gradient(135deg, #fffaf4, #fceeee);
+    border: 8px double #ffccda;
+    border-radius: 30px;
+    box-shadow: inset 0 0 20px rgba(255, 192, 203, 0.4), 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    padding: 30px 30px 60px;
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+}
+
+/* Подпись и пояснение */
+.scroll-caption {
+    font-size: 1.1rem;
+    color: #444;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.scroll-signature {
+    font-size: 1.6rem;
+    color: #cc2a5d;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Сургучная печать */
+.seal {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle at 30% 30%, #a10f2b, #570011);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: inset 0 0 5px #811, 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+/* Декоративные углы */
+.corner {
+    width: 20px;
+    height: 20px;
+    background-color: #ffccda;
+    position: absolute;
+}
+
+.top-left { top: -8px; left: -8px; border-radius: 0 0 100% 0; }
+.top-right { top: -8px; right: -8px; border-radius: 0 0 0 100%; }
+.bottom-left { bottom: -8px; left: -8px; border-radius: 0 100% 0 0; }
+.bottom-right { bottom: -8px; right: -8px; border-radius: 100% 0 0 0; }
+
+.fixed-signup-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050;
+    padding: 12px 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.fixed-signup-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.animate__animated {
+  animation-duration: 0.4s;
+}
+.animate__delay-05s { animation-delay: 0.5s; }
