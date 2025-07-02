@@ -100,6 +100,7 @@ h1, h2 {
     font-weight: 600;
     border: none;
     box-shadow: none;
+
 }
 .faq-item .accordion-button:not(.collapsed) {
     background-color: rgba(255, 218, 235, 0.4);
@@ -108,7 +109,11 @@ h1, h2 {
 .faq-item .accordion-body {
     background-color: transparent;
     color: #fdfdfd;
-    font-size: 1rem;
+    font-size: 1.25rem;
+}
+
+.accordion-button h3 {
+    font-size: 1.4rem;
 }
 
 /* Анимации */
